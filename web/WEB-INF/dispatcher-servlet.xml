@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!--与ac文件格式完全相同，本质是一个文件-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+<!--创建bean对象,name指定bean在Spring框架下的访问格式-->
+  <!--  <bean name="/helloController.do" class="cn.edu.ccut.controller.HelloController"/>-->
+    <!--用InternalResourceViewResolver类，解析ModelAndView对象,视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"/><!--指定前缀-->
+        <property name="suffix" value=".jsp"/><!--指定后缀-->
+    </bean>
+    <context:component-scan base-package="cn.edu.ccut.controller"/>
+    <mvc:interceptors>
+        <!--<mvc:interceptor>表明一个拦截器-->
+        <mvc:interceptor>
+            <!--mapping:拦截的范围-->
+            <mvc:mapping path="/**"/>
+            <!--bean: 拦截器的位置-->
+            <bean class="cn.edu.ccut.interceptor.CharacterInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+</beans>

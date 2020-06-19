@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Spring" type="spring">
+    <CLASSES>
+      <root url="jar://D:/Program Files (x86)/AllJar/spring基础包/com.springsource.org.apache.commons.logging-1.1.1.jar!/" />
+      <root url="jar://D:/Program Files (x86)/AllJar/spring基础包/spring-beans-5.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/Program Files (x86)/AllJar/spring基础包/spring-context-5.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/Program Files (x86)/AllJar/spring基础包/spring-core-5.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/Program Files (x86)/AllJar/spring基础包/spring-expression-5.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/Program Files (x86)/AllJar/Spring包/spring-aop-5.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/Program Files (x86)/AllJar/Spring包/spring-web-5.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/Program Files (x86)/AllJar/Spring包/spring-webmvc-5.0.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
