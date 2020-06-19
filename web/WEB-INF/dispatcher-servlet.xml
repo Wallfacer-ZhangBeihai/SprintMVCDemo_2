@@ -13,10 +13,13 @@
     </bean>
     <context:component-scan base-package="cn.edu.ccut.controller"/>
     <mvc:interceptors>
+        <!--全局拦截器-->
+      <!--  <bean class="cn.edu.ccut.interceptor.CharacterInterceptor"/>-->
         <!--<mvc:interceptor>表明一个拦截器-->
         <mvc:interceptor>
-            <!--mapping:拦截的范围-->
-            <mvc:mapping path="/**"/>
+            <!--mapping:拦截的格式，先定义格式再指定拦截器位置-->
+            <mvc:mapping path="/hellocontroller/*/h*.do"/>
+            <mvc:exclude-mapping path="/hellocontroller/123/hello.do"></mvc:exclude-mapping>
             <!--bean: 拦截器的位置-->
             <bean class="cn.edu.ccut.interceptor.CharacterInterceptor"/>
         </mvc:interceptor>
